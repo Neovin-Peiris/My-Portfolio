@@ -229,11 +229,12 @@ section { position: relative; z-index: 10; }
 
 .hero-name {
   font-family: 'Orbitron', monospace;
-  font-size: clamp(2.5rem, 6.5vw, 5.8rem);
+  font-size: clamp(2rem, 11vw, 5.8rem); /* ✦ FIX 1: min reduced 2.5→2rem, vw changed 6.5→11 so it scales with screen width on mobile */
   font-weight: 900;
-  line-height: 0.93;
-  letter-spacing: -0.02em;
+  line-height: 0.96; /* ✦ FIX 1: slightly loosened from 0.93 so letters don't clip on mobile */
+  letter-spacing: -0.01em; /* ✦ FIX 1: reduced negative tracking so wide Orbitron letters don't overflow */
   margin-bottom: 0.5rem;
+  word-break: break-word; /* ✦ FIX 1: prevents overflow if font is still too wide */
 }
 
 .hero-name .n1 { display: block; color: #fff; }
@@ -1278,4 +1279,26 @@ footer {
   footer { padding: 1.8rem 2rem; flex-direction: column; gap: 0.8rem; text-align: center; }
   .tl-wrap::before { left: 14px; transform: none; }
   .tl-item, .tl-item:nth-child(odd) { flex-direction: row; gap: 1.5rem; }
+}
+
+/* ✦ FIX 2: Extra small phones (≤480px) */
+@media (max-width: 480px) {
+  nav { padding: 1rem 1.25rem; } /* ✦ FIX 2: tighter nav padding on very small screens */
+  .nav-badge { font-size: 0.6rem; padding: 0.28rem 0.65rem; } /* ✦ FIX 2: shrink badge so it doesn't overflow next to logo */
+  .hero { padding: 0 1.25rem; padding-top: 5rem; } /* ✦ FIX 2: less side padding, top offset for fixed nav */
+  .hero-grid { gap: 2rem; }
+  .hero-role { font-size: 0.8rem; } /* ✦ FIX 2: role text too wide on small screens */
+  .hero-desc { font-size: 0.92rem; }
+  .hero-btns { flex-direction: column; } /* ✦ FIX 2: stack buttons vertically on very small screens */
+  .btn { text-align: center; padding: 0.85rem 1.5rem; }
+  .hero-right { height: 260px; } /* ✦ FIX 2: reduce card height so it doesn't dominate small screen */
+  .about-sec, .proj-sec, .contact-sec, .tl-sec { padding: 4rem 1.25rem; }
+  footer { padding: 1.5rem 1.25rem; }
+  .cbox { padding: 1.2rem; }
+}
+
+/* ✦ FIX 3: Hide custom cursor on touch devices — they have no mouse pointer */
+@media (hover: none) and (pointer: coarse) {
+  body { cursor: auto; } /* ✦ FIX 3: restore native cursor/tap indicator on touchscreens */
+  #cur, #cur-ring { display: none; } /* ✦ FIX 3: hide the JS cursor elements which are useless on touch */
 }
