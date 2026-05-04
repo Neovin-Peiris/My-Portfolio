@@ -1269,9 +1269,9 @@ footer {
 @media (max-width: 1024px) {
   nav { padding: 1.2rem 2rem; }
   .nav-links { display: none; }
-  .hero { padding: 0 2rem; }
+  .hero { padding: 6rem 2rem 3rem; }
   .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .hero-right { height: 320px; }
+  .hero-right { height: 480px; overflow: hidden; }
   .about-sec, .proj-sec, .contact-sec, .tl-sec { padding: 5rem 2rem; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .proj-grid { grid-template-columns: 1fr; }
@@ -1291,7 +1291,7 @@ footer {
   .hero-desc { font-size: 0.92rem; }
   .hero-btns { flex-direction: column; } /* ✦ FIX 2: stack buttons vertically on very small screens */
   .btn { text-align: center; padding: 0.85rem 1.5rem; }
-  .hero-right { height: 260px; } /* ✦ FIX 2: reduce card height so it doesn't dominate small screen */
+  .hero-right { height: 440px; overflow: hidden; } /* ✦ FIX 2: tall enough to contain 380px card + rings; hidden clips orbit bleed */
   .about-sec, .proj-sec, .contact-sec, .tl-sec { padding: 4rem 1.25rem; }
   footer { padding: 1.5rem 1.25rem; }
   .cbox { padding: 1.2rem; }
