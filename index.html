@@ -4,173 +4,181 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neovin Peiris — Digital Architect</title>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Three.js (CDN) -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Custom Cursor -->
   <div id="cur"></div>
   <div id="cur-ring"></div>
-
-  <!-- Background Layers -->
   <div class="neon-grid"></div>
   <div class="scanline"></div>
   <canvas id="three-canvas"></canvas>
-
-  <!-- Corner Decorations -->
   <div class="cdec tl"></div>
   <div class="cdec tr"></div>
   <div class="cdec bl"></div>
   <div class="cdec br"></div>
 
-  <!-- ══════════════════════════════════════
-       NAVIGATION
-  ══════════════════════════════════════ -->
+  <!-- NAV -->
   <nav>
     <div class="logo">NP://</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-badge">⬤ Available</div>
   </nav>
 
-  <!-- ══════════════════════════════════════
-       HERO
-  ══════════════════════════════════════ -->
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-grid">
-
-      <!-- Left: Text -->
       <div>
-        <div class="eyebrow" id="eyebrow-txt">Digital Architect &amp; UI Engineer</div>
+        <div class="eyebrow" id="eyebrow-txt">RPA Engineer · UI/UX Designer · Frontend Dev</div>
         <h1 class="hero-name">
           <span class="n1">NEOVIN</span>
           <span class="n2 glitch" data-text="PEIRIS">PEIRIS</span>
         </h1>
-        <p class="hero-role">// UI/UX Designer × Frontend Developer × CS Undergrad</p>
+        <p class="hero-role">// Automation · Integration · Design · CS Undergrad</p>
         <p class="hero-desc">
-          Crafting next-gen digital experiences where design precision meets engineering elegance.
-          Based in Sri Lanka, building for the world.
+          Building intelligent systems that cut through complexity — from process automation
+          and API integration to pixel-perfect interfaces. Based in Sri Lanka, delivering for the world.
         </p>
         <div class="hero-btns">
-          <a href="#work"    class="btn btn-p">View Work →</a>
+          <a href="#work" class="btn btn-p">View Work →</a>
           <a href="#contact" class="btn btn-g">Let's Connect</a>
         </div>
       </div>
 
-      <!-- Right: Holographic Card -->
       <div class="hero-right">
         <div class="orbit-wrap">
           <div class="ring r1"></div>
           <div class="ring r2"></div>
           <div class="ring r3"></div>
         </div>
-
-        <!-- Floating particles -->
         <div class="fp" style="background:var(--nc);top:18%;left:12%;width:5px;height:5px;box-shadow:0 0 8px var(--nc);animation-delay:0s;"></div>
         <div class="fp" style="background:var(--nm);top:72%;right:18%;width:5px;height:5px;box-shadow:0 0 8px var(--nm);animation-delay:-2s;"></div>
         <div class="fp" style="background:var(--ng);top:38%;right:8%;width:4px;height:4px;box-shadow:0 0 8px var(--ng);animation-delay:-4s;"></div>
         <div class="fp" style="background:var(--np);bottom:22%;left:22%;width:6px;height:6px;box-shadow:0 0 8px var(--np);animation-delay:-1s;"></div>
-
         <div class="holo" id="holo-card">
           <div class="holo-face">
             <div class="holo-c tl"></div>
             <div class="holo-c tr"></div>
             <div class="holo-c bl"></div>
             <div class="holo-c br"></div>
-
-            <div class="holo-av">NP</div>
+            <div class="holo-av">
+              <img src="assets/img.png" alt="Neovin Peiris" class="holo-av-img"
+                   onerror="this.style.display='none';this.parentElement.innerHTML='NP';" />
+            </div>
             <div class="holo-n">NEOVIN PEIRIS</div>
-            <div class="holo-t">UI/UX · FRONTEND · CS</div>
-
+            <div class="holo-t">RPA · UI/UX · FRONTEND · CS</div>
             <div class="holo-stats">
-              <div><div class="hs-n">5+</div><div class="hs-l">Projects</div></div>
+              <div><div class="hs-n">8+</div><div class="hs-l">Projects</div></div>
               <div style="width:1px;background:rgba(255,255,255,.09);"></div>
               <div><div class="hs-n">IIT</div><div class="hs-l">Colombo</div></div>
               <div style="width:1px;background:rgba(255,255,255,.09);"></div>
               <div><div class="hs-n">SL</div><div class="hs-l">Location</div></div>
             </div>
-
             <div class="holo-bar-w"><div class="holo-bar-f"></div></div>
-            <div class="holo-sys">SYSTEM ONLINE ██████░░ 75%</div>
+            <div class="holo-sys">SYSTEM ONLINE ██████████ 100%</div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       MARQUEE
-  ══════════════════════════════════════ -->
+  <!-- MARQUEE -->
   <div class="mq-wrap">
     <div class="mq-track">
       <div class="mq-item">
-        UI/UX Design<span class="mq-x">✦</span>React.js<span class="mq-x">✦</span>Figma<span class="mq-x">✦</span>
-        Python<span class="mq-x">✦</span>Frontend Engineering<span class="mq-x">✦</span>Java<span class="mq-x">✦</span>
-        Supabase<span class="mq-x">✦</span>MySQL<span class="mq-x">✦</span>Wireframing<span class="mq-x">✦</span>
-        Prototyping<span class="mq-x">✦</span>AI Integration<span class="mq-x">✦</span>NLP<span class="mq-x">✦</span>
+        UI/UX Design<span class="mq-x">✦</span>React.js<span class="mq-x">✦</span>Python<span class="mq-x">✦</span>
+        RPA / Process Automation<span class="mq-x">✦</span>Zoho One<span class="mq-x">✦</span>API Integration<span class="mq-x">✦</span>
+        Figma<span class="mq-x">✦</span>System Integration<span class="mq-x">✦</span>pandas · xlwings<span class="mq-x">✦</span>
+        Workflow Automation<span class="mq-x">✦</span>AI Integration<span class="mq-x">✦</span>NLP<span class="mq-x">✦</span>
       </div>
-      <!-- Duplicate for seamless loop -->
       <div class="mq-item" aria-hidden="true">
-        UI/UX Design<span class="mq-x">✦</span>React.js<span class="mq-x">✦</span>Figma<span class="mq-x">✦</span>
-        Python<span class="mq-x">✦</span>Frontend Engineering<span class="mq-x">✦</span>Java<span class="mq-x">✦</span>
-        Supabase<span class="mq-x">✦</span>MySQL<span class="mq-x">✦</span>Wireframing<span class="mq-x">✦</span>
-        Prototyping<span class="mq-x">✦</span>AI Integration<span class="mq-x">✦</span>NLP<span class="mq-x">✦</span>
+        UI/UX Design<span class="mq-x">✦</span>React.js<span class="mq-x">✦</span>Python<span class="mq-x">✦</span>
+        RPA / Process Automation<span class="mq-x">✦</span>Zoho One<span class="mq-x">✦</span>API Integration<span class="mq-x">✦</span>
+        Figma<span class="mq-x">✦</span>System Integration<span class="mq-x">✦</span>pandas · xlwings<span class="mq-x">✦</span>
+        Workflow Automation<span class="mq-x">✦</span>AI Integration<span class="mq-x">✦</span>NLP<span class="mq-x">✦</span>
       </div>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════
-       ABOUT
-  ══════════════════════════════════════ -->
+  <!-- ABOUT -->
   <section id="about" class="about-sec">
     <div class="about-grid">
-
       <div class="srl">
         <div class="sec-ey">About Me</div>
-        <h2 class="sec-h">Bridging<br/>design <em>&amp;</em><br/>code</h2>
+        <h2 class="sec-h">Automating<br/>systems <em>&amp;</em><br/>crafting UI</h2>
         <p class="about-body">
-          I'm a highly motivated Computer Science undergraduate at the Informatics Institute of
-          Technology, affiliated with the University of Westminster. My passion lies in creating
-          digital experiences that are visually striking and deeply functional — from the first
-          wireframe to the final pixel.
+          I'm a Computer Science undergraduate at the Informatics Institute of Technology
+          (affiliated with the University of Westminster, UK), currently working as an
+          Implementation / RPA Engineer Intern at Overdime Technologies. I build systems
+          that eliminate manual effort and connect platforms intelligently.
         </p>
         <p class="about-body">
-          I bridge creative vision and technical implementation — turning complex problems into
-          elegant, user-centered solutions.
+          From financial automation pipelines to full e-commerce ecosystems, I combine
+          engineering rigour with design sensibility — delivering solutions that are as
+          efficient under the hood as they are polished on the surface.
         </p>
-        <div class="skills-wrap">
-          <span class="sc">Figma</span>
-          <span class="sc">React.js</span>
-          <span class="sc">JavaScript</span>
-          <span class="sc pm">Python</span>
-          <span class="sc pm">Java</span>
-          <span class="sc gn">MySQL</span>
-          <span class="sc gn">Supabase</span>
-          <span class="sc">HTML / CSS</span>
-          <span class="sc pm">Wireframing</span>
-          <span class="sc gn">Prototyping</span>
-          <span class="sc">User Testing</span>
+
+        <div style="margin-bottom:0.75rem;">
+          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;color:rgba(180,200,255,.4);margin-bottom:0.45rem;">// PROGRAMMING</div>
+          <div class="skills-wrap">
+            <span class="sc pm">Python</span>
+            <span class="sc pm">pandas</span>
+            <span class="sc pm">xlwings</span>
+            <span class="sc pm">Java</span>
+            <span class="sc">JavaScript</span>
+            <span class="sc">React.js</span>
+            <span class="sc">HTML / CSS</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:0.75rem;">
+          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;color:rgba(180,200,255,.4);margin-bottom:0.45rem;">// AUTOMATION &amp; INTEGRATION</div>
+          <div class="skills-wrap">
+            <span class="sc au">RPA / Process Automation</span>
+            <span class="sc au">API Integration</span>
+            <span class="sc au">Workflow Automation</span>
+            <span class="sc au">System Integration</span>
+            <span class="sc au">Zoho Flow</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom:0.75rem;">
+          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;color:rgba(180,200,255,.4);margin-bottom:0.45rem;">// PLATFORMS &amp; TOOLS</div>
+          <div class="skills-wrap">
+            <span class="sc gn">Zoho Commerce</span>
+            <span class="sc gn">Zoho CRM</span>
+            <span class="sc gn">Zoho Inventory</span>
+            <span class="sc gn">MySQL</span>
+            <span class="sc gn">Supabase</span>
+            <span class="sc">Figma</span>
+            <span class="sc">Wireframing</span>
+            <span class="sc">Prototyping</span>
+            <span class="sc">User Testing</span>
+          </div>
         </div>
       </div>
 
       <div class="sr">
         <div class="flip-cards">
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="ff"><div class="fi">⚙️</div><div class="ft">Automation</div></div>
+              <div class="fb"><div class="fbt">RPA · Python Scripting · Excel Automation · Workflow Design · Process Optimisation</div></div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="ff"><div class="fi">🔗</div><div class="ft">Integration</div></div>
+              <div class="fb"><div class="fbt">API Integration · Zoho One Suite · Airwallex · MachShip · Zoho Flow · System Connectors</div></div>
+            </div>
+          </div>
           <div class="flip-card">
             <div class="flip-inner">
               <div class="ff"><div class="fi">🎨</div><div class="ft">Design Tools</div></div>
@@ -186,68 +194,86 @@
           <div class="flip-card">
             <div class="flip-inner">
               <div class="ff"><div class="fi">🧠</div><div class="ft">Programming</div></div>
-              <div class="fb"><div class="fbt">Python · Java · MySQL · Supabase · AI/NLP Integration</div></div>
+              <div class="fb"><div class="fbt">Python (pandas, xlwings) · Java · MySQL · Supabase · AI/NLP Integration</div></div>
             </div>
           </div>
           <div class="flip-card">
             <div class="flip-inner">
               <div class="ff"><div class="fi">🤝</div><div class="ft">Soft Skills</div></div>
-              <div class="fb"><div class="fbt">Leadership · Problem Solving · Communication · Teamwork</div></div>
+              <div class="fb"><div class="fbt">Leadership · Problem Solving · Client Communication · Cross-functional Teamwork</div></div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       TIMELINE
-  ══════════════════════════════════════ -->
-  <section class="tl-sec">
+  <!-- EXPERIENCE / TIMELINE -->
+  <section class="tl-sec" id="experience">
     <div style="max-width:800px;margin:0 auto;">
       <div class="sec-ey sr">Journey</div>
-      <h2 class="sec-h sr">My Timeline</h2>
-
+      <h2 class="sec-h sr">Experience &amp;<br/>Education</h2>
       <div class="tl-wrap">
 
+        <!-- Overdime — Current -->
         <div class="tl-item sr">
           <div class="tl-content">
-            <div class="tl-y">2023 — 2027</div>
-            <div class="tl-ti">BEng (Hons) Computer Science</div>
-            <div class="tl-su">Informatics Institute of Technology · Affiliated with University of Westminster, UK</div>
+            <div class="tl-badge live">⬤ Current Role</div>
+            <div class="tl-y">Sep 2025 — Present</div>
+            <div class="tl-ti">Implementation / RPA Engineer Intern</div>
+            <div class="tl-su" style="margin-bottom:0.55rem;">
+              <a href="https://overdimetechnologies.com/" target="_blank" rel="noopener noreferrer"
+                 style="color:var(--nc);text-decoration:none;">Overdime Technologies (Pvt) Ltd</a>
+            </div>
+            <p style="font-size:0.8rem;color:rgba(190,210,255,.7);line-height:1.65;">
+              Delivering end-to-end implementation and automation solutions — from configuring
+              Zoho One ecosystems for international clients to building Python-based financial
+              automation pipelines. Focused on eliminating manual workflows, integrating
+              third-party services via APIs, and ensuring seamless data flow across platforms.
+            </p>
           </div>
           <div class="tl-dot"></div>
           <div style="flex:1;"></div>
         </div>
 
+        <!-- IIT Degree -->
         <div class="tl-item sr" style="transition-delay:.1s">
           <div style="flex:1;"></div>
           <div class="tl-dot" style="background:var(--nm);box-shadow:0 0 10px var(--nm),0 0 28px rgba(255,0,255,.28);"></div>
           <div class="tl-content" style="border-color:rgba(255,0,255,.09);">
-            <div class="tl-y" style="color:var(--nm);">2024 — 2025</div>
-            <div class="tl-ti">Delegate Handling Lead</div>
-            <div class="tl-su">Rotaract Club of IIT · Leadership &amp; Event Coordination</div>
+            <div class="tl-y" style="color:var(--nm);">2023 — 2027</div>
+            <div class="tl-ti">BEng (Hons) Computer Science</div>
+            <div class="tl-su">Informatics Institute of Technology · Affiliated with University of Westminster, UK</div>
           </div>
         </div>
 
+        <!-- Rotaract -->
         <div class="tl-item sr" style="transition-delay:.2s">
           <div class="tl-content" style="border-color:rgba(57,255,20,.09);">
-            <div class="tl-y" style="color:var(--ng);">2023 — 2024</div>
-            <div class="tl-ti">Customer Service Representative</div>
-            <div class="tl-su">KJ4J &amp; Petfood4U · Customer Service, Team Collaboration &amp; Communication</div>
+            <div class="tl-y" style="color:var(--ng);">2024 — 2025</div>
+            <div class="tl-ti">Delegate Handling Lead</div>
+            <div class="tl-su">Rotaract Club of IIT · Leadership &amp; Event Coordination</div>
           </div>
           <div class="tl-dot" style="background:var(--ng);box-shadow:0 0 10px var(--ng),0 0 28px rgba(57,255,20,.28);"></div>
           <div style="flex:1;"></div>
+        </div>
+
+        <!-- KJ4J -->
+        <div class="tl-item sr" style="transition-delay:.3s">
+          <div style="flex:1;"></div>
+          <div class="tl-dot" style="background:var(--np);box-shadow:0 0 10px var(--np),0 0 28px rgba(255,0,128,.28);"></div>
+          <div class="tl-content" style="border-color:rgba(255,0,128,.09);">
+            <div class="tl-y" style="color:var(--np);">2023 — 2024</div>
+            <div class="tl-ti">Customer Service Representative</div>
+            <div class="tl-su">KJ4J &amp; Petfood4U · Customer Relations, Team Collaboration &amp; Communication</div>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       PROJECTS
-  ══════════════════════════════════════ -->
+  <!-- PROJECTS -->
   <section id="work" class="proj-sec">
     <div class="proj-hr sr">
       <div>
@@ -255,38 +281,41 @@
         <h2 class="sec-h">Selected<br/>Projects</h2>
       </div>
       <p style="max-width:30ch;font-size:.88rem;color:rgba(190,210,255,.65);line-height:1.7;">
-        A snapshot of things I've built — from AI-powered web apps to management systems.
+        Real-world systems — automation pipelines, platform integrations, AI-powered apps, and polished interfaces.
       </p>
     </div>
 
     <div class="proj-grid">
 
-      <!-- Featured: LandLytics -->
+      <!-- 01 Featured: Zoho One -->
       <div class="pc feat sr" id="pf" style="--ac:var(--nc);">
         <div class="fi-inner">
           <div>
-            <div class="pn">01 — Featured</div>
-            <h3 class="pt">LandLytics</h3>
+            <div class="pn">01 — Featured · Live</div>
+            <h3 class="pt">Zoho One E-commerce &amp; Ops Platform</h3>
             <p class="pd">
-              Land evaluation &amp; construction planning web app for Sri Lanka. AI-powered annotations,
-              NLP chatbot, environmental risk mapping, and regulation filtering.
+              Full-stack business operations platform for an Australian client, built on the Zoho One
+              ecosystem. Unified online commerce, inventory, CRM, and logistics under a single
+              automated workflow — cutting operational overhead and enabling real-time visibility
+              across the entire order lifecycle.
             </p>
             <div class="ptags">
-              <span class="ptag">Python</span>
-              <span class="ptag">React.js</span>
-              <span class="ptag">CSS</span>
-              <span class="ptag">Supabase</span>
-              <span class="ptag">Figma</span>
-              <span class="ptag">NLP/AI</span>
+              <span class="ptag">Zoho Commerce</span>
+              <span class="ptag">Zoho CRM</span>
+              <span class="ptag">Zoho Inventory</span>
+              <span class="ptag">Zoho Flow</span>
+              <span class="ptag">Airwallex</span>
+              <span class="ptag">MachShip</span>
+              <span class="ptag">API Integration</span>
             </div>
           </div>
           <div class="feat-hl">
-            <div class="fh-ti">Key Features</div>
-            <div class="fh-it">AI-Powered Annotations</div>
-            <div class="fh-it">Real-time Data Processing</div>
-            <div class="fh-it">Environmental Risk Mapping</div>
-            <div class="fh-it">NLP Chatbot Integration</div>
-            <div class="fh-it">Regulation Filtering Engine</div>
+            <div class="fh-ti">Key Deliverables</div>
+            <div class="fh-it">End-to-End E-commerce Setup</div>
+            <div class="fh-it">Payment Gateway (Airwallex)</div>
+            <div class="fh-it">Shipping &amp; Logistics (MachShip)</div>
+            <div class="fh-it">CRM &amp; Inventory Sync</div>
+            <div class="fh-it">Automated Workflows via Zoho Flow</div>
           </div>
         </div>
         <div class="parr">
@@ -296,13 +325,22 @@
         </div>
       </div>
 
-      <!-- Wellness Journey -->
-      <div class="pc sr" style="transition-delay:.1s;--ac:var(--nm);">
-        <div class="pn">02</div>
-        <h3 class="pt">Wellness Journey</h3>
-        <p class="pd">Informative website promoting SDG 3 — Good Health &amp; Well-being. Expert advice, practical tips, and holistic resources.</p>
+      <!-- 02 Financial Automation -->
+      <div class="pc sr" style="transition-delay:.1s;--ac:var(--ng);">
+        <div class="pn">02 — Automation</div>
+        <h3 class="pt">Financial Report Automation</h3>
+        <p class="pd">
+          Python-driven automation system that generates monthly, quarterly, and annual financial
+          reports for a finance company — replacing hours of manual Excel work with a single
+          script execution. Built with pandas and xlwings for precision data handling and
+          native Excel output.
+        </p>
         <div class="ptags">
-          <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">Responsive</span><span class="ptag">UX</span>
+          <span class="ptag">Python</span>
+          <span class="ptag">pandas</span>
+          <span class="ptag">xlwings</span>
+          <span class="ptag">Excel Automation</span>
+          <span class="ptag">RPA</span>
         </div>
         <div class="parr">
           <svg width="13" height="13" fill="none" stroke-width="2" viewBox="0 0 24 24">
@@ -311,13 +349,21 @@
         </div>
       </div>
 
-      <!-- Drop Me Taxi -->
-      <div class="pc sr" style="transition-delay:.15s;--ac:var(--ng);">
-        <div class="pn">03</div>
-        <h3 class="pt">Drop Me Taxi</h3>
-        <p class="pd">Console-based multi-city taxi service. Strong backend logic meets thoughtful user flow — trip details and invoice generation.</p>
+      <!-- 03 WorkHub24 -->
+      <div class="pc sr" style="transition-delay:.15s;--ac:var(--nm);">
+        <div class="pn">03 — Live Platform</div>
+        <h3 class="pt">WorkHub24</h3>
+        <p class="pd">
+          Worked with the
+          <a href="https://workhub24.com/" target="_blank" rel="noopener noreferrer"
+             style="color:var(--nc);text-decoration:none;">WorkHub24 platform</a>
+          — a professional services platform to create and manage form-based components, widgets, and workflow processes. 
+          Focused on configuring existing tools to support business operations and ensure efficient task flow within the platform.
+        </p>
         <div class="ptags">
-          <span class="ptag">Python</span><span class="ptag">Console UI</span><span class="ptag">System Design</span>
+          <span class="ptag">Form & Widget Configuration</span>
+          <span class="ptag">Workflow Automation</span>
+          <span class="ptag">Platform Utilization</span>
         </div>
         <div class="parr">
           <svg width="13" height="13" fill="none" stroke-width="2" viewBox="0 0 24 24">
@@ -326,11 +372,38 @@
         </div>
       </div>
 
-      <!-- Student Progress Tracker -->
+      <!-- 04 LandLytics -->
       <div class="pc sr" style="transition-delay:.2s;--ac:var(--np);">
-        <div class="pn">04</div>
+        <div class="pn">04 — AI Web App</div>
+        <h3 class="pt">LandLytics</h3>
+        <p class="pd">
+          Land evaluation and construction planning platform for Sri Lanka. AI-powered annotations,
+          NLP chatbot, environmental risk mapping, and regulation filtering — transforming complex
+          geo-data into actionable insights.
+        </p>
+        <div class="ptags">
+          <span class="ptag">Python</span>
+          <span class="ptag">React.js</span>
+          <span class="ptag">Supabase</span>
+          <span class="ptag">Figma</span>
+          <span class="ptag">NLP/AI</span>
+        </div>
+        <div class="parr">
+          <svg width="13" height="13" fill="none" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 05 Student Progress Tracker -->
+      <div class="pc sr" style="transition-delay:.25s;--ac:var(--nb);">
+        <div class="pn">05</div>
         <h3 class="pt">Student Progress Tracker</h3>
-        <p class="pd">Python app collecting grades, calculating averages, and auto-generating visual progress charts for deeper academic insights.</p>
+        <p class="pd">
+          Python application that collects academic grades, computes weighted averages, and
+          auto-generates visual progress charts — giving students and educators clear,
+          data-driven academic insight at a glance.
+        </p>
         <div class="ptags">
           <span class="ptag">Python</span><span class="ptag">Data Viz</span><span class="ptag">Charts</span>
         </div>
@@ -341,13 +414,31 @@
         </div>
       </div>
 
-      <!-- Plane Management System -->
-      <div class="pc sr" style="transition-delay:.25s;--ac:var(--nb);">
-        <div class="pn">05</div>
-        <h3 class="pt">Plane Management System</h3>
-        <p class="pd">Comprehensive seat reservation management for airlines — real-time tracking and efficient seat management.</p>
+      <!-- 06 Airline System -->
+      <div class="pc sr" style="transition-delay:.3s;--ac:var(--nc);">
+        <div class="pn">06</div>
+        <h3 class="pt">Airline Seat Management System</h3>
+        <p class="pd">
+          Comprehensive seat reservation system — real-time seat tracking, booking management,
+          and efficient allocation logic built with a focus on system architecture and data integrity.
+        </p>
         <div class="ptags">
           <span class="ptag">Java</span><span class="ptag">Architecture</span><span class="ptag">Real-time</span>
+        </div>
+        <div class="parr">
+          <svg width="13" height="13" fill="none" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 07 Wellness Journey -->
+      <div class="pc sr" style="transition-delay:.35s;--ac:var(--ng);">
+        <div class="pn">07</div>
+        <h3 class="pt">Wellness Journey</h3>
+        <p class="pd">Informative platform promoting SDG 3 — Good Health &amp; Well-being. Expert advice, practical tips, and holistic resources with a strong UX focus.</p>
+        <div class="ptags">
+          <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">Responsive</span><span class="ptag">UX</span>
         </div>
         <div class="parr">
           <svg width="13" height="13" fill="none" stroke-width="2" viewBox="0 0 24 24">
@@ -359,87 +450,60 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       CONTACT
-  ══════════════════════════════════════ -->
+  <!-- CONTACT -->
   <section id="contact" class="contact-sec">
     <div class="contact-in">
       <div class="sec-ey sr">Get In Touch</div>
-
       <div class="contact-grid">
-
         <div class="srl">
           <h2 class="contact-big">Let's build<br/><span>something great</span></h2>
           <p class="contact-sub">
-            Open to freelance work, internships, and exciting collaborations.
-            Let's make something that pushes boundaries.
+            Open to freelance engagements, internship opportunities, and exciting collaborations —
+            especially in automation, system integration, and digital product design.
           </p>
           <div class="soc-row">
             <a href="https://www.linkedin.com/in/neovin-peiris" target="_blank" rel="noopener noreferrer" class="soc-c">
-              <svg width="11" height="11" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
+              <svg width="11" height="11" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               LinkedIn
             </a>
             <a href="https://github.com/Neovin-Peiris" target="_blank" rel="noopener noreferrer" class="soc-c">
-              <svg width="11" height="11" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-              </svg>
+              <svg width="11" height="11" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
               GitHub
             </a>
           </div>
         </div>
-
         <div class="sr">
           <div class="cbox">
             <a href="mailto:neovinl.peiris@gmail.com" class="crow">
               <div class="ci">✉</div>
-              <div>
-                <div class="cl">Email</div>
-                <div class="cv">neovinl.peiris@gmail.com</div>
-              </div>
-              <svg style="margin-left:auto;flex-shrink:0;" width="15" height="15" fill="none" stroke="rgba(200,200,255,.18)" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-              </svg>
+              <div><div class="cl">Email</div><div class="cv">neovinl.peiris@gmail.com</div></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="15" height="15" fill="none" stroke="rgba(200,200,255,.18)" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
             <a href="tel:+94756822122" class="crow">
               <div class="ci">📱</div>
-              <div>
-                <div class="cl">Phone</div>
-                <div class="cv">+94 75 682 2122</div>
-              </div>
-              <svg style="margin-left:auto;flex-shrink:0;" width="15" height="15" fill="none" stroke="rgba(200,200,255,.18)" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-              </svg>
+              <div><div class="cl">Phone</div><div class="cv">+94 75 682 2122</div></div>
+              <svg style="margin-left:auto;flex-shrink:0;" width="15" height="15" fill="none" stroke="rgba(200,200,255,.18)" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
             <div class="crow" style="cursor:default;">
               <div class="ci">📍</div>
-              <div>
-                <div class="cl">Location</div>
-                <div class="cv">Boralesgamuwa, Sri Lanka</div>
-              </div>
+              <div><div class="cl">Location</div><div class="cv">Boralesgamuwa, Sri Lanka</div></div>
             </div>
             <div class="stat-badge">
               <div class="sdot"></div>
-              <div class="stxt">Open — Freelance · Internships · Collaborations</div>
+              <div class="stxt">Open — Automation · Integration · Freelance · Internships</div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer>
     <div class="fcopy">© 2025 Neovin Peiris — Engineered with precision.</div>
     <div class="logo" style="font-size:.95rem;">NP://</div>
   </footer>
 
-  <!-- Scripts -->
   <script src="main.js"></script>
-
 </body>
 </html>
